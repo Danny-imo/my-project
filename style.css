@@ -3,7 +3,7 @@
 .Mi {
   color: blue;
   list-style-type: none;
-  margin-left: -40px;
+  margin-left: -22px;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -43,7 +43,8 @@ a {
   background-image: url("./img/header-shapes\ mobile.png");
   background-color: #fff;
   background-repeat: no-repeat;
-  padding-top: 19%;
+  padding-top: 15%;
+  padding-left: 12px;
 }
 
 .social {
@@ -72,11 +73,9 @@ a {
 
 .buger {
   display: flex;
-  gap: 51%;
+  gap: 78%;
 }
 
 .ham {
   list-style-type: none;
-
-  /* margin-left: 70px; */
 }
