@@ -139,6 +139,11 @@ You can deploy this project using:Github Pages
 - LinkedIn: [Imo Daniel](https://linkedin.com/in/Imo Daniel)
 
 
+👤 **Santiago Ruido**
+
+- GitHub: [@Arch-Noize](https://github.com/Arch-Noize)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-ruido-a1404880/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

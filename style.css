@@ -384,77 +384,94 @@
   .im {
     margin-bottom: -20px;
   }
- /*contact form section*/
- .formsection{
-  background-image: url("./img/header-shapes/ mobile.png");
-  background: #6070FF;
 
- }
- .contact{
-font-family: Poppins;
-font-size: 40px;
-font-weight: 700;
-line-height: 52px;
-letter-spacing: 0em;
-text-align: center;
+  /* contact form section */
 
+  .formsection {
+    border-top-left-radius: 90px;
+    background-image: url(img/contact\ form\ shapes-mobile@2x.png);
+    background-size: 60%;
+    background-color: #6070ff;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+  }
 
- } 
- .pcontact{
-  font-family: Poppins;
-font-size: 20px;
-font-weight: 400;
-line-height: 28px;
-letter-spacing: 0em;
-text-align: center;
+  .Fsection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
- }
- .form{
-  display: flex;
-  flex-direction: column;
-  ;
- }
- .mail{
-  margin-top: 30px;
-  height: 18px;
-width: 273px;
-left: 16px;
-top: 15px;
-border-radius: nullpx;
+  .contact {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #ebebff;
+    margin-top: 90px;
+    margin-bottom: -10px;
+  }
 
- }
- .btn{
-  margin-top: 30px;
-  height: 24px;
-width: 110px;
-left: 16px;
-top: 12px;
-border-radius: nullpx;
-font-family: Poppins;
-font-size: 17px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0.03em;
-text-align: center;
-background: #6070FF;
+  .pcontact {
+    height: 137px;
+    width: 327px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #ebebff;
+  }
 
-
- }
- textarea{
-  margin-top: 30px;
-  height: 140px;
-width: 273px;
-left: 16px;
-top: 15px;
-border: 1px solid #CFD8DC
-
- }
- .name{
-  height: 18px;
-  width: 273px;
-  left: 16px;
-  top: 15px;
-  border-radius: nullpx;
+  .form {
+    display: flex;
+    flex-direction: column;
   
- }
+  }
+
+  .mail {
+    margin-top: 15px;
+    height: 35px;
+    width: 273px;
+    left: 16px;
+    top: 15px;
+    border-radius: 8px;
+  }
+
+  .btn {
+    color: #6070ff;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    border: 1px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 135px;
+  }
+
+  textarea {
+    margin-top: 15px;
+    height: 140px;
+    width: 273px;
+    left: 16px;
+    top: 15px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+  }
+
+  .name {
+    height: 34px;
+    width: 273px;
+    left: 16px;
+    top: 15px;
+    border-radius: 8px;
+  }
 }
