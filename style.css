@@ -386,7 +386,7 @@
   }
  /*contact form section*/
  .formsection{
-  background-image: url("./img/header-shapes/ mobile.png");
+  border-top-left-radius: 90px;
   background: #6070FF;
 
  }
