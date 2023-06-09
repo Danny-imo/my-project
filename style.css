@@ -101,6 +101,11 @@
 
   .card-img {
     margin-left: 14px;
+    transition: 0.3s;
+  }
+
+  .card-img:hover {
+    scale: 1.05;
   }
 
   #About {
@@ -225,6 +230,7 @@
     line-height: 24px;
     border: 1px solid;
     cursor: pointer;
+    transition: 0.3s;
   }
 
   .project-btn:hover {
@@ -233,7 +239,7 @@
   }
 
   .project-btn:active {
-    background-color: #6070ff;
+    background-color: #2230d2;
     color: #fff;
   }
 
