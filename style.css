@@ -105,6 +105,8 @@
 
   .card-img {
     margin-left: 14px;
+    height: 220px;
+    width: 295px;
   }
 
   #About {
