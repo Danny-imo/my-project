@@ -976,4 +976,21 @@ textarea {
 }
 
 
+@keyframes imageAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-img {
+  animation: imageAnimation 3s infinite;
+}
+
+
 }
