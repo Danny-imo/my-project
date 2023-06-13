@@ -74,7 +74,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-PENDING...
+Live demo (https://danny-imo.github.io/my-project/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
