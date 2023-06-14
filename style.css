@@ -78,7 +78,7 @@
 
   .buger {
     display: flex;
-    gap: 78%;
+    gap: 279px;
   }
 
   .ham {
@@ -170,6 +170,7 @@
     display: flex;
     margin-left: -30px;
     gap: 15px;
+    margin-top: 30px;
   }
 
   .tech-t {
@@ -516,7 +517,7 @@
 
   .burger {
     display: flex;
-    gap: 100%;
+    gap:100%;
   }
 
   .ham {
