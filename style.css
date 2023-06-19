@@ -3,37 +3,45 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-.portfolioM{
-  background: #6070FF;
+
+.portfolioM {
+  background: #6070ff;
   background-color: rgba(41, 58, 208, 0.8);
-height: 600px;
-width: 375px;
-display: none;
-top: 0px;
-position: absolute;
-backdrop-filter: blur(7px);
+  height: 600px;
+  width: 375px;
+  display: none;
+  top: 0;
+  position: absolute;
+  backdrop-filter: blur(7px);
 }
-.portfoliomenu{
-display: grid;
-gap: 35px;
-list-style-type: none;
+
+#mbmu {
+  text-decoration: none;
+  color: #fff;
 }
-.portfolioB{
+
+.portfoliomenu {
+  display: grid;
+  gap: 35px;
+  list-style-type: none;
+}
+
+.portfolioB {
   margin-left: 330px;
   font-size: 25px;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
-.menu{
-font-family: "Poppins", sans-serif;
-font-size: 32px;
-font-weight: 600;
-line-height: 44px;
-letter-spacing: 0em;
-text-align: left;
-color: #fff;
-}
 
+.menu {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #fff;
+}
 
 @media only screen and (min-width: 0) and (max-width: 764px) {
   .Mi {
