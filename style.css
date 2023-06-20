@@ -4,6 +4,46 @@
   font-family: "Poppins", sans-serif;
 }
 
+.portfolioM {
+  background: #6070ff;
+  background-color: rgba(41, 58, 208, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  backdrop-filter: blur(7px);
+}
+
+#mbmu {
+  text-decoration: none;
+  color: #fff;
+}
+
+.portfoliomenu {
+  display: grid;
+  gap: 35px;
+  list-style-type: none;
+}
+
+.portfolioB {
+  margin-left: 85%;
+  font-size: 25px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #fff;
+}
+
 @media only screen and (min-width: 0) and (max-width: 764px) {
   .Mi {
     color: blue;
@@ -78,7 +118,7 @@
 
   .buger {
     display: flex;
-    gap: 78%;
+    gap: 260px;
   }
 
   .ham {
