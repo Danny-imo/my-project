@@ -144,6 +144,11 @@ You can deploy this project using:Github Pages
 - GitHub: [@Arch-Noize](https://github.com/Arch-Noize)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-ruido-a1404880/)
 
+👤 Joy Tari-bagshaw
+
+- GitHub: [@Joy](https://github.com/Joy-tari-bagshaw)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-ruido-a1404880/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
