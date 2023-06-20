@@ -10,6 +10,7 @@
   height: 600px;
   width: 100%;
   display: none;
+  left: 0;
   top: 0;
   position: absolute;
   backdrop-filter: blur(7px);
@@ -27,7 +28,7 @@
 }
 
 .portfolioB {
-  margin-left: 330px;
+  margin-left: 85%;
   font-size: 25px;
   color: #fff;
   font-family: "Poppins", sans-serif;
