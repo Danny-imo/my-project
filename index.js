@@ -115,8 +115,8 @@ modalContainer.innerHTML = `
       <div class="p-div">
       <ul class="project-technologies" id="projectTechnologies"></ul>
       <div class="project-buttons">
-        <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live</a></button>
-        <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source</a></button>
+        <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live <img src="img/Icon.png" class="btn-img"/></a></button>
+        <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source <img src="img/Frame.png" class="btn-img"/></a></button>
       </div>
       </div>
       </div>

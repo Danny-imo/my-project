@@ -94,6 +94,12 @@
     cursor: pointer;
   }
   
+
+  .btn-img {
+    margin-left: 86px;
+    margin-top: -50px;
+  }
+
   .modal {
     position: fixed;
     top: 0;
@@ -194,6 +200,8 @@ border: 1px #6070FF solid;
   
   .project-buttons {
     margin-top: 20px;
+    display: flex;
+    gap: 10%;
   }
   
   .project-buttons a {
@@ -1371,8 +1379,15 @@ border: 1px #6070FF solid;
 
   .project-buttons {
     margin-top: 20px;
+    display: flex;
+    gap: 10%;
   }
   
+  .btn-img {
+    margin-left: 86px;
+    margin-top: -50px;
+  }
+
   .project-buttons a {
     margin-right: 10px;
   }
