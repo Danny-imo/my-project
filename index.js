@@ -16,7 +16,6 @@ menuItem.forEach((menuItem) => {
   });
 });
 
-
 // PROJECT POPUP
 const projects = [
   {
@@ -26,7 +25,7 @@ const projects = [
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
     liveLink: '',
-    sourceLink: ''
+    sourceLink: '',
   },
   {
     name: 'Multi-Post Stories',
@@ -35,7 +34,7 @@ const projects = [
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
     liveLink: '',
-    sourceLink: ''
+    sourceLink: '',
   },
   {
     name: 'Facebook 360',
@@ -44,7 +43,7 @@ const projects = [
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
     liveLink: '',
-    sourceLink: ''
+    sourceLink: '',
   },
   {
     name: 'UBER Navigation',
@@ -53,8 +52,8 @@ const projects = [
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
     liveLink: '',
-    sourceLink: ''
-  }
+    sourceLink: '',
+  },
 ];
 
 const cardsContainer = document.querySelector('#About');
@@ -90,19 +89,12 @@ projects.forEach((project) => {
   cardsContainer.appendChild(card);
 
   const button = card.querySelector('.project-btn');
-  button.addEventListener('click', () => {
-    openModal(project);
-  });
-});
 
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal');
+  modalContainer.id = 'modal';
 
-
-
-const modalContainer = document.createElement('div');
-modalContainer.classList.add('modal');
-modalContainer.id = 'modal';
-
-modalContainer.innerHTML = `
+  modalContainer.innerHTML = `
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2 class="project-title" id="projectTitle"></h2>
@@ -124,47 +116,48 @@ modalContainer.innerHTML = `
   </div>
 `;
 
-document.body.appendChild(modalContainer);
+  document.body.appendChild(modalContainer);
 
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('projectTitle');
+  const modalImage = document.getElementById('projectImage');
+  const modalDescription = document.getElementById('projectDescription');
+  const modalTechnologies = document.getElementById('projectTechnologies');
+  const modalLiveLink = document.getElementById('projectLiveLink');
+  const modalSourceLink = document.getElementById('projectSourceLink');
+  const closeModalButton = document.querySelector('.close');
+  const modalStack = document.getElementById('cano');
 
+  function openModal(project) {
+    modalTitle.textContent = project.name;
+    modalImage.src = project.image;
+    modalDescription.textContent = project.description;
 
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('projectTitle');
-const modalImage = document.getElementById('projectImage');
-const modalDescription = document.getElementById('projectDescription');
-const modalTechnologies = document.getElementById('projectTechnologies');
-const modalLiveLink = document.getElementById('projectLiveLink');
-const modalSourceLink = document.getElementById('projectSourceLink');
-const closeModalButton = document.querySelector('.close');
-const modalStack = document.getElementById('cano');
+    modalTechnologies.innerHTML = '';
+    project.technologies.forEach((technology) => {
+      const li = document.createElement('li');
+      li.textContent = technology;
+      modalTechnologies.appendChild(li);
+    });
 
-function openModal(project) {
-  modalTitle.textContent = project.name;
-  modalImage.src = project.image;
-  modalDescription.textContent = project.description;
+    modalStack.innerHTML = '';
+    project.stack.forEach((stx) => {
+      const ol = document.createElement('li');
+      ol.textContent = stx;
+      modalStack.appendChild(ol);
+    });
 
-  modalTechnologies.innerHTML = '';
-  project.technologies.forEach((technology) => {
-    const li = document.createElement('li');
-    li.textContent = technology;
-    modalTechnologies.appendChild(li);
+    modalLiveLink.href = project.liveLink;
+    modalSourceLink.href = project.sourceLink;
+
+    modal.classList.add('modal-open');
+  }
+
+  closeModalButton.addEventListener('click', () => {
+    modal.classList.remove('modal-open');
   });
 
-
-  modalStack.innerHTML = '';
-  project.stack.forEach((stx) => {
-    const ol = document.createElement('li');
-    ol.textContent = stx;
-    modalStack.appendChild(ol);
+  button.addEventListener('click', () => {
+    openModal(project);
   });
-
-
-  modalLiveLink.href = project.liveLink;
-  modalSourceLink.href = project.sourceLink;
-
-  modal.classList.add('modal-open');
-}
-
-closeModalButton.addEventListener('click', () => {
-  modal.classList.remove('modal-open');
 });
