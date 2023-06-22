@@ -18,145 +18,153 @@ menuItem.forEach((menuItem) => {
 
 
 // PROJECT POPUP
-
 const projects = [
   {
-    image: 'img/Snapshoot Portfolio.png',
     name: 'Tonic',
-    preview: '',
-    code: '',
-    tags: ['html', 'css', 'javascript'],
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
+    image: './img/Dbg1.png',
+    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    liveLink: '',
+    sourceLink: ''
   },
   {
-    image: 'img/card 1.svg',
     name: 'Multi-Post Stories',
-    preview: '',
-    code: '',
-    tags: ['html', 'Ruby on rails', 'css', 'javascript'],
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
+    image: './img/Dbg2.png',
+    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    liveLink: '',
+    sourceLink: ''
   },
   {
-    image: 'img/card 1 (2).svg',
-    name: 'Tonic',
-    preview: '',
-    code: '',
-    tags: ['html', 'Ruby on rails', 'css', 'javascript'],
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    name: 'Facebook 360',
+    description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
+    image: './img/Dbg3.png',
+    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    liveLink: '',
+    sourceLink: ''
   },
   {
-    image: 'img/card 4.svg',
-    name: 'Multi-Post Stories',
-    preview: '',
-    code: '',
-    tags: ['html', 'Ruby on rails', 'css', 'javascript'],
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-  },
+    name: 'UBER Navigation',
+    description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
+    image: './img/Dbg4.png',
+    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    liveLink: '',
+    sourceLink: ''
+  }
 ];
 
-const cardsContainer = document.querySelector('.grid');
+const cardsContainer = document.querySelector('#About');
 
-// Function to create project cards
-function createProjectCard(project) {
-  const item = document.createElement('work-container-main');
-  item.classList.add('cards-held-here');
+projects.forEach((project) => {
+  const card = document.createElement('div');
+  card.classList.add('about-section');
 
-  const content = document.createElement('work-cont');
-  content.innerHTML = `
-    <section class="work-cont work-container-desktop">
-      <div class="portfolio-img desktop-img-0">
-        <img src="${project.image}" alt="${project.name}" class="full-size">
-      </div>
-      <div class="work-content">
-        <h2 class="tonic0 tonic">${project.name}</h2>
-        <ul class="prop">
-          <li class="can">CANOPY</li>
-          <li class="bac"><img src="img/dot.jpg" alt="dot"> Back End Dev</li>
-          <li class="num"><img src="img/dot.jpg" alt="dot"> 2015</li>
+  card.innerHTML = `
+    <img src="${project.image}" class="card-img" />
+      <div class="canopy">
+        <h4 class="about-head">${project.name}</h4>
+        <ul class="cano">
+          <li class="tec">FACEBOOK</li>
+          <li class="tech">Full Stack Dev</li>
+          <li class="tech">2015</li>
         </ul>
-        <p class="tonic-def">${project.desc}</p>
-        <ul class="stack stack-desktop">
-          ${project.tags.map(tag => `<li class="${tag}">${tag}</li>`).join('')}
+        <p class="canopy-txt">
+        A daily selection of privately personalized reads; no accounts or
+          sign-ups required
+        </p>
+        <ul class="tech1">
+          <li class="tech-t">HTML</li>
+          <li class="tech-r">Ruby On Rails</li>
+          <li class="tech-t">CSS</li>
+          <li class="tech-j">JavaScript</li>
         </ul>
-        <div class="button">
-          <button class="testButton">See Project</button>
-        </div>
+        
+        <button type="button" class="project-btn">See Project</button>
       </div>
-    </section>
   `;
 
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.classList.add('d-none');
-  const modalContent = document.createElement('div');
-  modalContent.innerHTML = `
-    <div class="work-content-modal">
-      <span class="closeBtn">&times;</span>
-      <h2 class="tonic0-modal">${project.name}</h2>
-      <ul class="prop-modal">
-        <li class="can">CANOPY</li>
-        <li class="bac"><img src="img/dot.jpg" alt="dot"> Back End Dev</li>
-        <li class="num"><img src="img/dot.jpg" alt="dot"> 2015</li>
-      </ul>
-      <div class="portfolio-modal-img">
-        <img src="${project.image}" alt="${project.name}">
+  cardsContainer.appendChild(card);
+
+  const button = card.querySelector('.project-btn');
+  button.addEventListener('click', () => {
+    openModal(project);
+  });
+});
+
+
+
+
+const modalContainer = document.createElement('div');
+modalContainer.classList.add('modal');
+modalContainer.id = 'modal';
+
+modalContainer.innerHTML = `
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="project-title" id="projectTitle"></h2>
+    <ul id="cano">
+    </ul>
+    <div class="project-details">
+      <img class="project-image" id="projectImage" src="" alt="">
+      <div class="p-cont">
+      <p class="project-description" id="projectDescription"></p>
+      <div class="p-div">
+      <ul class="project-technologies" id="projectTechnologies"></ul>
+      <div class="project-buttons">
+        <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live</a></button>
+        <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source</a></button>
       </div>
-      <div class="tonic-modal">
-        <p>${project.desc}</p>
       </div>
-      <div class="alignment">
-        <ul class="stack-modal stack-desktop">
-          ${project.tags.map(tag => `<li class="${tag}">${tag}</li>`).join('')}
-          <li class="git">github</li>
-          <li class="ruby">ruby</li>
-          <li class="boot">Bootstraps</li>
-        </ul>
-        <img src="img/icon11.jpg" alt="separator" class="line">
-        <div class="modal-button">
-          <a href="${project.preview}"><button id="modalBtn-0" type="button">See live <img src="img/icon12.jpg" alt="modal-icon"></button></a>
-          <a href="${project.code}"><button id="modalBtn-1" type="button">See Source <img src="img/icon13.jpg" alt="modal-icon-git"></button></a>
-        </div>
       </div>
     </div>
-  `;
+  </div>
+`;
 
-  modal.appendChild(modalContent);
-  item.appendChild(content);
-  item.appendChild(modal);
-  return item;
-}
+document.body.appendChild(modalContainer);
 
-// Function to create project cards dynamically
-function createProjectCards() {
-  cardsContainer.innerHTML = '';
-  projects.forEach((project) => {
-    const card = createProjectCard(project);
-    cardsContainer.appendChild(card);
-  });
-}
 
-// Function to show/hide the modal popup
-function toggleModal(index) {
-  const modal = document.querySelectorAll('.modal')[index];
-  modal.classList.toggle('modal');
-  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-}
 
-// Event listeners for "See Project" buttons and close buttons
-document.addEventListener('DOMContentLoaded', () => {
-  createProjectCards();
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('projectTitle');
+const modalImage = document.getElementById('projectImage');
+const modalDescription = document.getElementById('projectDescription');
+const modalTechnologies = document.getElementById('projectTechnologies');
+const modalLiveLink = document.getElementById('projectLiveLink');
+const modalSourceLink = document.getElementById('projectSourceLink');
+const closeModalButton = document.querySelector('.close');
+const modalStack = document.getElementById('cano');
 
-  const buttons = document.querySelectorAll('.testButton');
-  buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      toggleModal(index);
-    });
+function openModal(project) {
+  modalTitle.textContent = project.name;
+  modalImage.src = project.image;
+  modalDescription.textContent = project.description;
+
+  modalTechnologies.innerHTML = '';
+  project.technologies.forEach((technology) => {
+    const li = document.createElement('li');
+    li.textContent = technology;
+    modalTechnologies.appendChild(li);
   });
 
-  const closeButtons = document.querySelectorAll('.closeBtn');
-  closeButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      toggleModal(index);
-    });
+
+  modalStack.innerHTML = '';
+  project.stack.forEach((stx) => {
+    const ol = document.createElement('li');
+    ol.textContent = stx;
+    modalStack.appendChild(ol);
   });
+
+
+  modalLiveLink.href = project.liveLink;
+  modalSourceLink.href = project.sourceLink;
+
+  modal.classList.add('modal-open');
+}
+
+closeModalButton.addEventListener('click', () => {
+  modal.classList.remove('modal-open');
 });
