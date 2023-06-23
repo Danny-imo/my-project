@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -148,6 +150,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-right: 50px;
+    gap: 10px;
   }
 
   .project-technologies li {
@@ -173,6 +176,7 @@
 
   .project-technologies li:nth-child(3) {
     padding-right: 25px;
+    margin-left: -18px;
   }
 
   .btn-link {
@@ -197,6 +201,7 @@
 
   .project-technologies li:nth-child(5) {
     padding-right: 25px;
+    margin-left: -18px;
   }
 
   .project-description {
@@ -1306,6 +1311,7 @@
 
   .project-title {
     margin-top: 10px;
+    color: #344563;
   }
 
   .view-details-button {
@@ -1350,10 +1356,10 @@
 
   .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 33px;
+    right: 30px;
     font-size: 1.5rem;
-    color: #888;
+    color: #344563;
     cursor: pointer;
   }
 
@@ -1365,7 +1371,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-right: 50px;
-    gap: 20px;
+    gap: 10px;
   }
 
   .project-buttons {

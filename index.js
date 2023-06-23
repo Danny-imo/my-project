@@ -22,8 +22,10 @@ const projects = [
     name: 'Tonic',
     description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
     image: './img/Dbg1.png',
-    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    stack: ['CANOPY', 'Back end Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    technologiesTwo: ['HTML', 'CSS', 'JavaScript'],
+    desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     liveLink: '',
     sourceLink: '',
   },
@@ -33,6 +35,8 @@ const projects = [
     image: './img/Dbg2.png',
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    technologiesTwo: ['HTML', 'Ruby on rails', 'CSS', 'JavaScript'],
+    desc: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     liveLink: '',
     sourceLink: '',
   },
@@ -42,6 +46,8 @@ const projects = [
     image: './img/Dbg3.png',
     stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    technologiesTwo: ['HTML', 'Ruby on rails', 'CSS', 'JavaScript'],
+    desc: 'Exploring the future of media in Facebooks first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     liveLink: '',
     sourceLink: '',
   },
@@ -49,8 +55,10 @@ const projects = [
     name: 'UBER Navigation',
     description: 'Lorem Ipsum is simply dummy text of the prinhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
     image: './img/Dbg4.png',
-    stack: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+    stack: ['UBER', 'Full Stack Dev', '2018'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby ', 'Bootstrap'],
+    technologiesTwo: ['HTML', 'Ruby on rails', 'CSS', 'JavaScript'],
+    desc: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     liveLink: '',
     sourceLink: '',
   },
@@ -58,37 +66,43 @@ const projects = [
 
 const cardsContainer = document.querySelector('#About');
 
+function getTechnologyClass(technology) {
+  switch (technology) {
+    case 'HTML':
+      return 'tech-t';
+    case 'CSS':
+      return 'tech-t';
+    case 'JavaScript':
+      return 'tech-j';
+    case 'Ruby on rails':
+      return 'tech-r';
+    default:
+      return 'tech';
+  }
+}
+
 projects.forEach((project) => {
   const card = document.createElement('div');
   card.classList.add('about-section');
 
   card.innerHTML = `
-    <img src="${project.image}" class="card-img" />
-      <div class="canopy">
-        <h4 class="about-head">${project.name}</h4>
-        <ul class="cano">
-          <li class="tec">FACEBOOK</li>
-          <li class="tech">Full Stack Dev</li>
-          <li class="tech">2015</li>
-        </ul>
-        <p class="canopy-txt">
-        A daily selection of privately personalized reads; no accounts or
-          sign-ups required
-        </p>
-        <ul class="tech1">
-          <li class="tech-t">HTML</li>
-          <li class="tech-r">Ruby On Rails</li>
-          <li class="tech-t">CSS</li>
-          <li class="tech-j">JavaScript</li>
-        </ul>
-        
-        <button type="button" class="project-btn">See Project</button>
-      </div>
-  `;
+  <img src="${project.image}" class="card-img" />
+  <div class="canopy">
+    <h4 class="about-head">${project.name}</h4>
+    <ul class="cano">
+      ${project.stack.map((theme) => `<li class="tech">${theme}</li>`).join('')}
+    </ul>
+    <p class="canopy-txt">
+      ${project.desc}
+    </p>
+    <ul class="tech1">
+      ${project.technologiesTwo.map((technology) => `<li class="${getTechnologyClass(technology)}">${technology}</li>`).join('')}
+    </ul>
+    <button type="button" class="project-btn">See Project</button>
+  </div>
+`;
 
   cardsContainer.appendChild(card);
-
-  const button = card.querySelector('.project-btn');
 
   const modalContainer = document.createElement('div');
   modalContainer.classList.add('modal');
@@ -107,8 +121,8 @@ projects.forEach((project) => {
       <div class="p-div">
       <ul class="project-technologies" id="projectTechnologies"></ul>
       <div class="project-buttons">
-        <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live <img src="img/Icon.png" class="btn-img"/></a></button>
-        <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source <img src="img/Frame.png" class="btn-img"/></a></button>
+      <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live <img src="img/Icon.png" class="btn-img"/></a></button>
+      <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source <img src="img/Frame.png" class="btn-img"/></a></button>
       </div>
       </div>
       </div>
@@ -153,11 +167,12 @@ projects.forEach((project) => {
     modal.classList.add('modal-open');
   }
 
-  closeModalButton.addEventListener('click', () => {
-    modal.classList.remove('modal-open');
-  });
-
+  const button = card.querySelector('.project-btn');
   button.addEventListener('click', () => {
     openModal(project);
+  });
+
+  closeModalButton.addEventListener('click', () => {
+    modal.classList.remove('modal-open');
   });
 });
