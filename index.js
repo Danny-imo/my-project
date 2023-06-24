@@ -176,3 +176,16 @@ projects.forEach((project) => {
     modal.classList.remove('modal-open');
   });
 });
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const emailInput = document.getElementById('email');
+  const verifier = emailInput.value.toLowerCase();
+  if (emailInput.value !== verifier) {
+    const error = document.getElementById('error');
+    error.style.display = 'block';
+  } else {
+    error.style.display = 'none';
+    e.target.submit();
+  }
+});
