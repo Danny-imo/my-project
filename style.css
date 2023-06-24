@@ -99,8 +99,7 @@
   }
 
   .btn-img {
-    margin-left: 86px;
-    margin-top: -50px;
+    margin-left: 20px;
   }
 
   .modal {
@@ -140,6 +139,9 @@
     font-size: 1.5rem;
     color: #888;
     cursor: pointer;
+    border: none;
+    background-color: #fff;
+    outline: none;
   }
 
   .project-details {
@@ -175,8 +177,9 @@
   }
 
   .project-technologies li:nth-child(3) {
-    padding-right: 25px;
-    margin-left: -18px;
+    padding-right: 35px;
+    margin-left: -44px;
+    padding-left: 15px;
   }
 
   .btn-link {
@@ -191,17 +194,36 @@
 
   .project-live-link {
     text-decoration: none;
-    color: #6070ff;
+    display: flex;
+    align-items: center;
+    color: #396df2;
+    height: 40px;
+    width: 59%;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #6070ff;
+    cursor: pointer;
+    padding-left: 10px;
   }
 
   .project-source-link {
     text-decoration: none;
-    color: #6070ff;
+    display: flex;
+    align-items: center;
+    color: #396df2;
+    height: 40px;
+    width: 70%;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #6070ff;
+    cursor: pointer;
+    padding-left: 3px;
   }
 
   .project-technologies li:nth-child(5) {
-    padding-right: 25px;
     margin-left: -18px;
+    padding-right: 29px;
+    padding-left: 16px;
   }
 
   .project-description {
@@ -879,7 +901,9 @@
   }
 
   .project-technologies li:nth-child(3) {
-    padding-right: 25px;
+    padding-right: 35px;
+    margin-left: -44px;
+    padding-left: 15px;
   }
 
   .btn-link {
@@ -894,16 +918,35 @@
 
   .project-live-link {
     text-decoration: none;
-    color: #6070ff;
+    display: flex;
+    align-items: center;
+    color: #396df2;
+    height: 40px;
+    width: 59%;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #6070ff;
+    cursor: pointer;
+    padding-left: 10px;
   }
 
   .project-source-link {
     text-decoration: none;
-    color: #6070ff;
+    display: flex;
+    align-items: center;
+    color: #396df2;
+    height: 40px;
+    width: 70%;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #6070ff;
+    cursor: pointer;
+    padding-left: 3px;
   }
 
   .project-technologies li:nth-child(5) {
-    padding-right: 25px;
+    padding-right: 29px;
+    padding-left: 16px;
   }
 
   #cano {
@@ -1361,6 +1404,9 @@
     font-size: 1.5rem;
     color: #344563;
     cursor: pointer;
+    border: none;
+    background-color: #fff;
+    outline: none;
   }
 
   .project-details {
@@ -1377,15 +1423,18 @@
   .project-buttons {
     margin-top: 20px;
     display: flex;
-    gap: 10%;
+    gap: 4%;
   }
 
   .btn-img {
-    margin-left: 86px;
-    margin-top: -50px;
+    margin-left: 20px;
   }
 
   .project-buttons a {
     margin-right: 10px;
   }
+}
+#email {
+  color: red;
+   display: none;
 }
