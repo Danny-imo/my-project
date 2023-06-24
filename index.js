@@ -179,7 +179,6 @@ projects.forEach((project) => {
 const form  = document.getElementById('contact-form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const emailInput = document.getElementById('email');
   const verifier = emailInput.value.toLowerCase();
   if(emailInput.value !== verifier) {
@@ -189,5 +188,4 @@ form.addEventListener('submit', (e) => {
     error.style.display = 'none';
     e.target.submit();
   }
-  
 });
