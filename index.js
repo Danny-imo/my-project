@@ -110,7 +110,7 @@ projects.forEach((project) => {
 
   modalContainer.innerHTML = `
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <button class="close">&times;</button>
     <h2 class="project-title" id="projectTitle"></h2>
     <ul id="cano">
     </ul>
@@ -121,8 +121,8 @@ projects.forEach((project) => {
       <div class="p-div">
       <ul class="project-technologies" id="projectTechnologies"></ul>
       <div class="project-buttons">
-      <button class="btn-link"><a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live <img src="img/Icon.png" class="btn-img"/></a></button>
-      <button class="btn-link"><a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source <img src="img/Frame.png" class="btn-img"/></a></button>
+      <a class="project-live-link" id="projectLiveLink" href="#" target="_blank">See Live <img src="img/Icon.png" class="btn-img"/></a>
+      <a class="project-source-link" id="projectSourceLink" href="#" target="_blank">See Source <img src="img/Frame.png" class="btn-img"/></a>
       </div>
       </div>
       </div>
